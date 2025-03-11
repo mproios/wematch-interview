@@ -1,0 +1,97 @@
+{
+  "rentals": [
+    {
+      "id": 1,
+      "title": "Luxury Studio Apartment",
+      "location": "New York, NY",
+      "price": 2500,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "property_type": "apartment",
+      "description": "A beautiful and spacious studio apartment with high-end finishes. The building amenities include a gym, pool, and rooftop lounge.",
+      "image": "https://www.example.com/luxury-studio.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Cozy 2 Bedroom House",
+      "location": "Los Angeles, CA",
+      "price": 1500,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "property_type": "house",
+      "description": "A charming and comfortable 2 bedroom house with a lovely backyard. The property is located in a quiet neighborhood with easy access to shopping and dining.",
+      "image": "https://www.example.com/cozy-house.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Stylish 1 Bedroom Condo",
+      "location": "Chicago, IL",
+      "price": 2000,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "property_type": "apartment",
+      "description": "A sleek and stylish 1 bedroom condo in the heart of downtown Chicago. The building amenities include a 24-hour doorman and a fitness center.",
+      "image": "https://www.example.com/stylish-condo.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Large 3 Bedroom House",
+      "location": "Miami, FL",
+      "price": 3500,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "property_type": "house",
+      "description": "A spacious and bright 3 bedroom house with a fully-equipped kitchen. The property features a big backyard and a garage.",
+      "image": "https://www.example.com/large-house.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Comfortable 2 Bedroom Flat",
+      "location": "London, UK",
+      "price": 1200,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "property_type": "apartment",
+      "description": "A cozy and well-appointed 2 bedroom flat in a prime location of London. The building amenities include a lift and a cleaning service.",
+      "image": "https://www.example.com/comfortable-flat.jpg"
+    }
+  ],
+  "tenants": [
+    {
+        "id": 1,
+        "firstname": "John",
+        "lastname": "Doe",
+        "email": "john.doe@email.com",
+        "password": "azerty",
+        "age": 42,
+        "rental_id": 2
+    },
+    {
+        "id": 2,
+        "firstname": "Justin",
+        "lastname": "Thompson",
+        "email": "justinthompson@email.com",
+        "password": "1234",
+        "age": 35,
+        "rental_id": 1
+    },
+    {
+        "id": 3,
+        "firstname": "Laura",
+        "lastname": "Thompson",
+        "email": "laura.thompson@email.com",
+        "password": "iL0v3w3m4tch",
+        "age": 31,
+        "rental_id": 1
+    },
+    {
+        "id": 4,
+        "firstname": "David",
+        "lastname": "Fitzgerald",
+        "email": "fitzgerald.david@email.com",
+        "password": "password",
+        "age": 21,
+        "rental_id": 3
+    }
+  ]
+}

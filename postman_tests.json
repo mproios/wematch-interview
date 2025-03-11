@@ -1,0 +1,571 @@
+{
+	"info": {
+		"_postman_id": "1812ec9b-7db4-4db7-9713-ce45d62ee146",
+		"name": "Wematch Rentals Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23235321"
+	},
+	"item": [
+		{
+			"name": "Get all rentals",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Should return all the rentals\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.eql(",
+							"        [",
+							"            {",
+							"                \"id\": 1,",
+							"                \"title\": \"Luxury Studio Apartment\",",
+							"                \"location\": \"New York, NY\",",
+							"                \"price\": 2500,",
+							"                \"bedrooms\": 1,",
+							"                \"bathrooms\": 1,",
+							"                \"property_type\": \"apartment\",",
+							"                \"description\": \"A beautiful and spacious studio apartment with high-end finishes. The building amenities include a gym, pool, and rooftop lounge.\",",
+							"                \"image\": \"https://www.example.com/luxury-studio.jpg\"",
+							"            },",
+							"            {",
+							"                \"id\": 2,",
+							"                \"title\": \"Cozy 2 Bedroom House\",",
+							"                \"location\": \"Los Angeles, CA\",",
+							"                \"price\": 1500,",
+							"                \"bedrooms\": 2,",
+							"                \"bathrooms\": 1,",
+							"                \"property_type\": \"house\",",
+							"                \"description\": \"A charming and comfortable 2 bedroom house with a lovely backyard. The property is located in a quiet neighborhood with easy access to shopping and dining.\",",
+							"                \"image\": \"https://www.example.com/cozy-house.jpg\"",
+							"            },",
+							"            {",
+							"                \"id\": 3,",
+							"                \"title\": \"Stylish 1 Bedroom Condo\",",
+							"                \"location\": \"Chicago, IL\",",
+							"                \"price\": 2000,",
+							"                \"bedrooms\": 1,",
+							"                \"bathrooms\": 1,",
+							"                \"property_type\": \"apartment\",",
+							"                \"description\": \"A sleek and stylish 1 bedroom condo in the heart of downtown Chicago. The building amenities include a 24-hour doorman and a fitness center.\",",
+							"                \"image\": \"https://www.example.com/stylish-condo.jpg\"",
+							"            },",
+							"            {",
+							"                \"id\": 4,",
+							"                \"title\": \"Large 3 Bedroom House\",",
+							"                \"location\": \"Miami, FL\",",
+							"                \"price\": 3500,",
+							"                \"bedrooms\": 3,",
+							"                \"bathrooms\": 2,",
+							"                \"property_type\": \"house\",",
+							"                \"description\": \"A spacious and bright 3 bedroom house with a fully-equipped kitchen. The property features a big backyard and a garage.\",",
+							"                \"image\": \"https://www.example.com/large-house.jpg\"",
+							"            },",
+							"            {",
+							"                \"id\": 5,",
+							"                \"title\": \"Comfortable 2 Bedroom Flat\",",
+							"                \"location\": \"London, UK\",",
+							"                \"price\": 1200,",
+							"                \"bedrooms\": 2,",
+							"                \"bathrooms\": 1,",
+							"                \"property_type\": \"apartment\",",
+							"                \"description\": \"A cozy and well-appointed 2 bedroom flat in a prime location of London. The building amenities include a lift and a cleaning service.\",",
+							"                \"image\": \"https://www.example.com/comfortable-flat.jpg\"",
+							"            }",
+							"        ]",
+							"    );",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rentals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rentals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all houses",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Should return all the rentals\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.eql(",
+							"        [",
+							"            {",
+							"                \"id\": 2,",
+							"                \"title\": \"Cozy 2 Bedroom House\",",
+							"                \"location\": \"Los Angeles, CA\",",
+							"                \"price\": 1500,",
+							"                \"bedrooms\": 2,",
+							"                \"bathrooms\": 1,",
+							"                \"property_type\": \"house\",",
+							"                \"description\": \"A charming and comfortable 2 bedroom house with a lovely backyard. The property is located in a quiet neighborhood with easy access to shopping and dining.\",",
+							"                \"image\": \"https://www.example.com/cozy-house.jpg\"",
+							"            },",
+							"            {",
+							"                \"id\": 4,",
+							"                \"title\": \"Large 3 Bedroom House\",",
+							"                \"location\": \"Miami, FL\",",
+							"                \"price\": 3500,",
+							"                \"bedrooms\": 3,",
+							"                \"bathrooms\": 2,",
+							"                \"property_type\": \"house\",",
+							"                \"description\": \"A spacious and bright 3 bedroom house with a fully-equipped kitchen. The property features a big backyard and a garage.\",",
+							"                \"image\": \"https://www.example.com/large-house.jpg\"",
+							"            }",
+							"        ]",
+							"    );",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rentals?type=house",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rentals"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "house"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all apartments",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Should return all the rentals\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.eql(",
+							"        [",
+							"            {",
+							"                \"id\": 1,",
+							"                \"title\": \"Luxury Studio Apartment\",",
+							"                \"location\": \"New York, NY\",",
+							"                \"price\": 2500,",
+							"                \"bedrooms\": 1,",
+							"                \"bathrooms\": 1,",
+							"                \"property_type\": \"apartment\",",
+							"                \"description\": \"A beautiful and spacious studio apartment with high-end finishes. The building amenities include a gym, pool, and rooftop lounge.\",",
+							"                \"image\": \"https://www.example.com/luxury-studio.jpg\"",
+							"            },",
+							"            {",
+							"                \"id\": 3,",
+							"                \"title\": \"Stylish 1 Bedroom Condo\",",
+							"                \"location\": \"Chicago, IL\",",
+							"                \"price\": 2000,",
+							"                \"bedrooms\": 1,",
+							"                \"bathrooms\": 1,",
+							"                \"property_type\": \"apartment\",",
+							"                \"description\": \"A sleek and stylish 1 bedroom condo in the heart of downtown Chicago. The building amenities include a 24-hour doorman and a fitness center.\",",
+							"                \"image\": \"https://www.example.com/stylish-condo.jpg\"",
+							"            },",
+							"            {",
+							"                \"id\": 5,",
+							"                \"title\": \"Comfortable 2 Bedroom Flat\",",
+							"                \"location\": \"London, UK\",",
+							"                \"price\": 1200,",
+							"                \"bedrooms\": 2,",
+							"                \"bathrooms\": 1,",
+							"                \"property_type\": \"apartment\",",
+							"                \"description\": \"A cozy and well-appointed 2 bedroom flat in a prime location of London. The building amenities include a lift and a cleaning service.\",",
+							"                \"image\": \"https://www.example.com/comfortable-flat.jpg\"",
+							"            }",
+							"        ]",
+							"    );",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rentals?type=apartment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rentals"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "apartment"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all tenants",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"",
+							"",
+							"",
+							"pm.test(\"Should return all the tenants\", function () {",
+							"    const data = [",
+							"        {",
+							"            \"id\": 1,",
+							"            \"firstname\": \"John\",",
+							"            \"lastname\": \"Doe\",",
+							"            \"email\": \"john.doe@email.com\",",
+							"            \"password\": \"azerty\",",
+							"            \"age\": 42,",
+							"            \"rental_id\": 2",
+							"        },",
+							"        {",
+							"            \"id\": 2,",
+							"            \"firstname\": \"Justin\",",
+							"            \"lastname\": \"Thompson\",",
+							"            \"email\": \"justinthompson@email.com\",",
+							"            \"password\": \"1234\",",
+							"            \"age\": 35,",
+							"            \"rental_id\": 1",
+							"        },",
+							"        {",
+							"            \"id\": 3,",
+							"            \"firstname\": \"Laura\",",
+							"            \"lastname\": \"Thompson\",",
+							"            \"email\": \"laura.thompson@email.com\",",
+							"            \"password\": \"iL0v3w3m4tch\",",
+							"            \"age\": 31,",
+							"            \"rental_id\": 1",
+							"        },",
+							"        {",
+							"            \"id\": 4,",
+							"            \"firstname\": \"David\",",
+							"            \"lastname\": \"Fitzgerald\",",
+							"            \"email\": \"fitzgerald.david@email.com\",",
+							"            \"password\": \"password\",",
+							"            \"age\": 21,",
+							"            \"rental_id\": 3",
+							"        }",
+							"    ]",
+							"",
+							"    var jsonData = JSON.stringify(pm.response.json());",
+							"    const res = jsonData === JSON.stringify(data) || jsonData === JSON.stringify(data.map((tenant) => {",
+							"        const { password, ...withoutPassword } = tenant",
+							"        return withoutPassword",
+							"    }))",
+							"    pm.expect(res).to.be.true",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/tenants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tenants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get tenants of rental 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"",
+							"",
+							"",
+							"pm.test(\"Should return tenants of rental 1\", function () {",
+							"    const data = [",
+							"        {",
+							"            \"id\": 2,",
+							"            \"firstname\": \"Justin\",",
+							"            \"lastname\": \"Thompson\",",
+							"            \"email\": \"justinthompson@email.com\",",
+							"            \"password\": \"1234\",",
+							"            \"age\": 35,",
+							"            \"rental_id\": 1",
+							"        },",
+							"        {",
+							"            \"id\": 3,",
+							"            \"firstname\": \"Laura\",",
+							"            \"lastname\": \"Thompson\",",
+							"            \"email\": \"laura.thompson@email.com\",",
+							"            \"password\": \"iL0v3w3m4tch\",",
+							"            \"age\": 31,",
+							"            \"rental_id\": 1",
+							"        }",
+							"    ]",
+							"",
+							"    var jsonData = JSON.stringify(pm.response.json());",
+							"    const res = jsonData === JSON.stringify(data) || jsonData === JSON.stringify(data.map((tenant) => {",
+							"        const { password, ...withoutPassword } = tenant",
+							"        return withoutPassword",
+							"    }))",
+							"    pm.expect(res).to.be.true",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rentals/1/tenants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rentals",
+						"1",
+						"tenants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add an apartment to the rentals list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"",
+							"",
+							"",
+							"pm.test(\"Should return the created studio\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(pm.response.code).to.eql(201)",
+							"    pm.expect(jsonData).to.eql({",
+							"        \"id\": 6,",
+							"        \"title\": \"Student Studio\",",
+							"        \"location\": \"Paris, FR\",",
+							"        \"price\": 900,",
+							"        \"bedrooms\": 1,",
+							"        \"bathrooms\": 1,",
+							"        \"property_type\": \"apartment\",",
+							"        \"description\": \"Small but functional studio, great for students or holidays in France's capital !\",",
+							"        \"image\": \"https://www.example.com/student-studio.jpg\"",
+							"    })",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Student Studio\",\n    \"location\": \"Paris, FR\",\n    \"price\": 900,\n    \"bedrooms\": 1,\n    \"bathrooms\": 1,\n    \"property_type\": \"apartment\",\n    \"description\": \"Small but functional studio, great for students or holidays in France's capital !\",\n    \"image\": \"https://www.example.com/student-studio.jpg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/rentals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rentals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit a rental of the list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"",
+							"",
+							"",
+							"pm.test(\"Should return the created studio\", function () {",
+							"    var jsonData = pm.response.json();",
+							"",
+							"    pm.expect(jsonData).to.eql({",
+							"        \"id\": 6,",
+							"        \"title\": \"Student Studio\",",
+							"        \"location\": \"Paris, FR\",",
+							"        \"price\": 900,",
+							"        \"bedrooms\": 1,",
+							"        \"bathrooms\": 1,",
+							"        \"property_type\": \"apartment\",",
+							"        \"description\": \"Small but VERY VERY functional studio, great for students or holidays in France's capital !\",",
+							"        \"image\": \"https://www.example.com/student-studio.jpg\"",
+							"    })",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"Small but VERY VERY functional studio, great for students or holidays in France's capital !\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/rentals/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rentals",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a rental from the list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Should return good HTTP code\", function () {",
+							"    var httpCode = pm.response.code;",
+							"    pm.expect(httpCode).to.eql(200)",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rentals/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rentals",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Return an error if rental does not exist",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"",
+							"",
+							"",
+							"pm.test(\"Should return an error if rental does not exist\", function () {",
+							"    var httpCode = pm.response.code;",
+							"    pm.expect(httpCode).to.eql(404)",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/rentals/1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"rentals",
+						"1000"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
