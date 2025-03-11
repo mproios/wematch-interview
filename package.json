@@ -1,4 +1,8 @@
 {
+	"name": "wematch-interview",
+	"version": "1.0.0",
+	"description": "Wematch interview express api server",
+	"main": "app.ts",
 	"scripts": {
 		"dev": "nodemon app.ts"
 	},
@@ -11,5 +15,6 @@
 		"@types/node": "^22.13.10",
 		"nodemon": "^3.1.7",
 		"typescript": "^5.8.2"
-	}
+	},
+	"author": "mproios"
 }
