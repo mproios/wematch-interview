@@ -1,6 +1,6 @@
 # Wematch Interview - Michail Proios
 
-A simple express server with validation using zod and typescript.
+A simple express API server with validation using zod and typescript.
 
 ## Installation
 
